@@ -14,5 +14,5 @@ def sales_reports(log_file):
             #prints the line to the console if true
             print(line)
 
-#stores results into sales_reports file
+#calles sales_repors function
 sales_reports(log_file)
