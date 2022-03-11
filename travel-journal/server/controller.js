@@ -228,6 +228,12 @@ module.exports = {
             ('Yemen'),
             ('Zambia'),
             ('Zimbabwe');
+
+            INSERT INTO cities (name, rating, country_id)
+            VALUES ('Tempe', 4, (SELECT country_id FROM countries WHERE name = 'United States of America')),
+            ('Paris', 5, (SELECT country_id FROM countries WHERE name = 'France')),
+            ('Moscow', 3,(SELECT country_id FROM countries WHERE name = 'Russia'));
+
             `).then(() => {
                 console.log('DB seeded!')
                 res.sendStatus(200)
